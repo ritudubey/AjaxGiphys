@@ -1,0 +1,43 @@
+
+body{
+	background: purple;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+}
+
+h1{
+	font-family: 'Alfa Slab One', cursive;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.jumbotron {
+	    margin-top: 10px;
+}
+
+#startId {
+text-align: center;
+font-size: 30px;
+}
+
+#gameId {
+color : pink;
+border-width: 2px;
+border-style: dashed;
+padding: 10px 10px 10px 10px;
+}
+
+li{
+color : black;
+border-width: thick;
+border-style: solid;
+background-color: beige;
+padding: 10px 10px 10px 10px;
+margin : 10px 10px 10px 10px;
+}
+
+footer{
+text-align: center;
+font-size: 12px;
+margin-top: 10px;
+}
