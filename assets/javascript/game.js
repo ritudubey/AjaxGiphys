@@ -25,7 +25,7 @@
 	// ========================================================
 
 	// This function handles events where one button is clicked
-	$('#addMovie').on('click', function(){
+	$("body").on("click", '#addMovie', function() {
 
 		// This line of code will grab the input from the textbox
 		var movie = $('#movie-input').val();
