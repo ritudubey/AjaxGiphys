@@ -15,6 +15,7 @@
 			// Then dynamicaly generates buttons for each movie in the array
 			var b = $("<button></button>");
 			b.attr("data-festival", movies[i]);
+			b.addClass("btn-default");
 			b.html(movies[i]);
 			$("#buttonView").append(b);
 		}
@@ -54,7 +55,7 @@
 
 	 			for (var i = 0; i < results.length; i++) {
 
-	 				var gifDiv = $('<div class="item" style="float: left;">')
+	 				var gifDiv = $('<div class="item">')
 
 	 				var rating = results[i].rating;
 
