@@ -1,43 +1,22 @@
-
-body{
-	background: purple;
-	font-family: 'Montserrat', sans-serif;
-	font-size: 24px;
+body {
+	font-size: 18px;
+	line-height: 34px;
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
-h1{
-	font-family: 'Alfa Slab One', cursive;
-	font-size: 30px;
-	font-weight: bold;
+* {
+	box-sizing: border-box;
 }
 
-.jumbotron {
-	    margin-top: 10px;
+
+section.content {
+  clear: both;
+  background-color: pink;
 }
 
-#startId {
-text-align: center;
-font-size: 30px;
-}
 
-#gameId {
-color : pink;
-border-width: 2px;
-border-style: dashed;
-padding: 10px 10px 10px 10px;
-}
-
-li{
-color : black;
-border-width: thick;
-border-style: solid;
-background-color: beige;
-padding: 10px 10px 10px 10px;
-margin : 10px 10px 10px 10px;
-}
-
-footer{
-text-align: center;
-font-size: 12px;
-margin-top: 10px;
+img{
+    border-radius: 10px;
+    margin-bottom: 5px;
+    margin-right: 5px;
 }

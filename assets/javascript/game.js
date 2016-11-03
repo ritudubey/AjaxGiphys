@@ -18,6 +18,7 @@
 			b.html(movies[i]);
 			$("#buttonView").append(b);
 		}
+		
 	}
 
 	// ========================================================
@@ -29,17 +30,16 @@
 		var movie = $('#movie-input').val();
 
 		// The movie from the textbox is then added to our array
-		movies.push(movie);
+		if(movie !== "") {
+			movies.push(movie);
+			// Our array then runs which handles the processing of our movie array
+			renderButtons();
+		}
 		
-		// Our array then runs which handles the processing of our movie array
-		renderButtons();
-
-
 		// We have this line so that users can hit "enter" instead of clicking on ht button and it won't move to the next page
 		return false;
 	});
 
-	 //$('button').on('click', function() {
 	 	$("body").on("click", 'button', function() {
 	 		$("#gifsAppearHere").empty();
 	 		var p = $(this).data('festival');
@@ -53,7 +53,8 @@
 	 			var results = response.data;
 
 	 			for (var i = 0; i < results.length; i++) {
-	 				var gifDiv = $('<div class="item">')
+
+	 				var gifDiv = $('<div class="item" style="float: left;">')
 
 	 				var rating = results[i].rating;
 
@@ -65,21 +66,19 @@
 	 				personImage.attr('data-still', results[i].images.fixed_height_still.url);
 	 				personImage.attr('data-state', 'animate');
 
-	 				//$(this).attr('src', $(this).data('animate'));
-	 				//$(this).attr('data-state', 'animate');
-
-	 				// <img src="http://media2.giphy.com/media/8rFQp4kHXJ0gU/200_s.gif" data-still="http://media2.giphy.com/media/8rFQp4kHXJ0gU/200_s.gif" data-animate="http://media2.giphy.com/media/8rFQp4kHXJ0gU/200.gif" data-state="still" class="gif">
-
 
 	 				gifDiv.append(p);
 	 				gifDiv.append(personImage);
 
+	 				gifDiv.attr('margin', '10px 10px 10px 10px');
+
 	 				$('#gifsAppearHere').prepend(gifDiv);
+
+
 	 			}
 	 		});
 	 	});
 	 	$("body").on("click", 'img', function() {
-	 		//$('.gif').on('click', function(){
 	 		var state = $(this).attr("data-state");
 	 		console.log(state);
 	 		if(state == 'still') {
